@@ -1,4 +1,4 @@
-AI Log Intelligence Agent
+## AI Log Intelligence Agent
 
 Overview
 
@@ -6,7 +6,7 @@ The AI Log Intelligence Agent is a backend system that automatically detects ano
 
 ---
 
-Problem Statement
+## Problem Statement
 
 Modern systems generate large volumes of logs, making it difficult to:
 - Detect issues in real time
@@ -15,7 +15,7 @@ Modern systems generate large volumes of logs, making it difficult to:
 
 ---
 
-Solution
+## Solution
 
 This project provides an automated pipeline that:
 - Accepts logs through an API
@@ -24,7 +24,7 @@ This project provides an automated pipeline that:
 
 ---
 
-Key Features
+## Key Features
 
 - Anomaly detection for system logs
 - AI-powered root cause analysis
@@ -34,7 +34,7 @@ Key Features
 
 ---
 
-Tech Stack
+## Tech Stack
 
 - Python
 - FastAPI
@@ -43,7 +43,7 @@ Tech Stack
 
 ---
 
-Project Structure
+## Project Structure
 
 ai-log-intelligence-agent/
 
@@ -56,7 +56,7 @@ README.md               -> Project documentation
 
 ---
 
-How to Run
+## How to Run
 
 1. Clone the repository
 
@@ -88,7 +88,7 @@ http://127.0.0.1:8000/docs
 
 ----
 
-API Endpoint
+## API Endpoint
 
 POST /analyze
 
@@ -107,7 +107,7 @@ Response:
 
 ---
 
-Future Improvements
+## Future Improvements
 
 - Integration with real-time log streaming tools like Kafka
 - Advanced machine learning-based anomaly detection
@@ -116,7 +116,7 @@ Future Improvements
 
 ---
 
-Author
+## Author
 
 Jayanth Sadurla  
 B.Tech CSE (Data Science)
