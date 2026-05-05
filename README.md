@@ -81,6 +81,12 @@ uvicorn app:app --reload
 http://127.0.0.1:8000/docs
 
 ---
+##  Live Demo
+
+🔗 API: https://ai-log-intelligence-agent.onrender.com  
+📄 Swagger UI: https://ai-log-intelligence-agent.onrender.com/docs
+
+----
 
 API Endpoint
 
