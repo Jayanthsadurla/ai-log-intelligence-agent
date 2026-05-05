@@ -49,3 +49,7 @@ def analyze_log(data: LogInput):
 @app.get("/logs")
 def fetch_logs():
     return get_logs()
+import uvicorn
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
