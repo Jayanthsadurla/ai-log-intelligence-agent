@@ -4,38 +4,42 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def analyze_log_with_ai(log):
+    log = log[:500]  # limit size
+
     api_key = os.getenv("OPENAI_API_KEY")
 
-    # If no API key → fallback (VERY IMPORTANT)
+    # Fallback if no API key
     if not api_key or api_key == "your_actual_api_key_here":
         return f"""
-        Detected issue in log: {log}
+Detected issue in log: {log}
 
-        Possible issue:
-        - System error or failure detected
+Possible issue:
+- {"Database issue" if "database" in log.lower() else "System error detected"}
 
-        Suggested fix:
-        - Check logs carefully
-        - Restart service
-        - Verify database or network connection
-        """
+Suggested fix:
+- Restart service
+- Check logs carefully
+- Verify network/database connection
+"""
 
-    # If API key exists → use OpenAI
     try:
         from openai import OpenAI
 
-        client = OpenAI(api_key=api_key)
+        client = OpenAI(
+            api_key=api_key,
+            timeout=10
+        )
 
         prompt = f"""
-        Analyze the following system log:
+Analyze the following system log:
 
-        1. Identify the issue
-        2. Explain in simple terms
-        3. Suggest a fix
+1. Identify the issue
+2. Explain in simple terms
+3. Suggest a fix
 
-        Log:
-        {log}
-        """
+Log:
+{log}
+"""
 
         response = client.chat.completions.create(
             model="gpt-4.1-mini",
