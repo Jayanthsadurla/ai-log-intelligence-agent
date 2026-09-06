@@ -39,7 +39,7 @@ This project provides an automated pipeline that:
 - Python
 - FastAPI
 - Pydantic
-- OpenAI API (for AI-based analysis)
+- Gemini API (for AI-based analysis)
 
 ---
 
